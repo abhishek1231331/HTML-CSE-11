@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flourish Your Mind</title>
+  <style>
+    body {
+      background: radial-gradient(circle at center, #b3f0ff, #e6ccff);
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      opacity: 0.8;
+      animation: fadeIn 5s ease-in-out;
+    }
+
+    .flower {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: pink;
+      border-radius: 50%;
+      animation: bloom 8s infinite ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bloom {
+      0% { transform: scale(0) translateY(0); opacity: 0.5; }
+      50% { transform: scale(2) translateY(-100px); opacity: 1; }
+      100% { transform: scale(0) translateY(0); opacity: 0.5; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Flourish Your Mind 🌱</h1>
+  <p>Let every thought bloom into something beautiful.</p>
+
+  <script>
+    // Create floating "flowers"
+    for (let i = 0; i < 20; i++) {
+      const flower = document.createElement('div');
+      flower.className = 'flower';
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDelay = Math.random() * 8 + 's';
+      flower.style.background = `hsl(${Math.random() * 360}, 70%, 70%)`;
+      document.body.appendChild(flower);
+    }
+  </script>
+</body>
+</html>
