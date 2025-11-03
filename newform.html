@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive HTML Form Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML Form with All Common Elements</h1>
+  <form action="/submit" method="post">
+
+    <!-- Text inputs -->
+    <label for="text">Text Input:</label>
+    <input type="text" id="text" name="text">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="number">Number:</label>
+    <input type="number" id="number" name="number" min="0" max="100">
+
+    <label for="tel">Telephone:</label>
+    <input type="tel" id="tel" name="tel">
+
+    <label for="url">URL:</label>
+    <input type="url" id="url" name="url">
+
+    <!-- Date and time -->
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date">
+
+    <label for="datetime">Date and Time:</label>
+    <input type="datetime-local" id="datetime" name="datetime">
+
+    <label for="month">Month:</label>
+    <input type="month" id="month" name="month">
+
+    <label for="week">Week:</label>
+    <input type="week" id="week" name="week">
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time">
+
+    <!-- Choices -->
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+
+    <label for="language">Favorite Language:</label>
+    <select id="language" name="language">
+      <option value="">--Select--</option>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JavaScript</option>
+    </select>
+
+    <label for="colors">Choose colors:</label>
+    <select id="colors" name="colors" multiple>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+
+    <!-- File and range -->
+    <label for="file">Upload a file:</label>
+    <input type="file" id="file" name="file">
+
+    <label for="range">Range (0–100):</label>
+    <input type="range" id="range" name="range" min="0" max="100">
+
+    <!-- Color -->
+    <label for="color">Favorite color:</label>
+    <input type="color" id="color" name="color">
+
+    <!-- Checkboxes -->
+    <label>Hobbies:</label>
+    <input type="checkbox" id="coding" name="hobbies" value="coding">
+    <label for="coding">Coding</label>
+    <input type="checkbox" id="music" name="hobbies" value="music">
+    <label for="music">Music</label>
+    <input type="checkbox" id="sports" name="hobbies" value="sports">
+    <label for="sports">Sports</label>
+
+    <!-- Text area -->
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Enter your message..."></textarea>
+
+    <!-- Hidden input -->
+    <input type="hidden" name="form_id" value="12345">
+
+    <!-- Buttons -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+  </form>
+</body>
+</html>
